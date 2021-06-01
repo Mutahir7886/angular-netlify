@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  path = 'http://localhost:9000/api/users';
+  path = 'https://focused-kirch-8b0c62.netlify.app/.netlify/functions/app/api/users';
   mylist:any;
   constructor( private httpservice: HttpServiceService,
     private router:Router) { }

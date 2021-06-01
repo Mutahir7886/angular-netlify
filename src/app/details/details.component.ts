@@ -10,7 +10,7 @@ import {HttpServiceService} from '../Service/http-service.service'
 export class DetailsComponent implements OnInit {
 
   idOfResume:any;
-  path = 'http://localhost:9000/finduser/';
+  path = 'https://focused-kirch-8b0c62.netlify.app/.netlify/functions/app/finduser/';
   resu:any
 
   constructor(private httpservice: HttpServiceService, private route:ActivatedRoute) { 
