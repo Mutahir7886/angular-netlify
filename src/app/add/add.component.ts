@@ -9,7 +9,7 @@ import { HttpServiceService } from '../Service/http-service.service';
 })
 export class AddComponent implements OnInit {
   formGroup:FormGroup;
-  path = 'https://focused-kirch-8b0c62.netlify.app/.netlify/functions/app/add';
+  path = 'https://resume-backend.netlify.app/.netlify/functions/app/add';
   
 
   constructor(private formBuilder: FormBuilder,

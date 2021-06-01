@@ -9,12 +9,13 @@ import {Router} from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  path = 'https://focused-kirch-8b0c62.netlify.app/.netlify/functions/app/api/users';
+  path = 'https://resume-backend.netlify.app/.netlify/functions/app/api/users';
   mylist:any;
   constructor( private httpservice: HttpServiceService,
     private router:Router) { }
 
   ngOnInit(): void {
+
     this.httpservice.get(this.path).subscribe( val => {
       
       this.mylist = val.data;
