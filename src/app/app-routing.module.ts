@@ -4,6 +4,7 @@ import {AddComponent} from './add/add.component';
 import {DetailsComponent} from './details/details.component';
 import {ListComponent} from './list/list.component';
 import { HtmlComponent } from './html/html.component';
+import { TopPlayersComponent } from './top-players/top-players.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,11 @@ const routes: Routes = [
   {
     path:'html', component:HtmlComponent, pathMatch:'full'
   },
+  {
+    path:'topPlayer', component:TopPlayersComponent, pathMatch:'full'
+  },
+
+  
 ]
 
 @NgModule({

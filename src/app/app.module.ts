@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HtmlComponent } from './html/html.component';
+import { TopPlayersComponent } from './top-players/top-players.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HtmlComponent } from './html/html.component';
     AddComponent,
     DetailsComponent,
     ListComponent,
-    HtmlComponent
+    HtmlComponent,
+    TopPlayersComponent
   ],
   imports: [
     BrowserModule,
