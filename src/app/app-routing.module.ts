@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {AddComponent} from './add/add.component';
 import {DetailsComponent} from './details/details.component';
 import {ListComponent} from './list/list.component';
+import { HtmlComponent } from './html/html.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,10 @@ const routes: Routes = [
   {
     path:'', redirectTo:'/lists' ,pathMatch:'full', 
   },
-];
+  {
+    path:'html', component:HtmlComponent, pathMatch:'full'
+  },
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
