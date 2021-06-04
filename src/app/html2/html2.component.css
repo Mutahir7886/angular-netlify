@@ -1,0 +1,25 @@
+
+/* education site */
+
+.nav{
+    color: white;
+    border-top-right-radius: 10px;
+    background: #3d2c0e;
+    padding: 7px 20px;
+    border-top-left-radius: 10px;
+
+}
+
+.part-1{
+    background: url(../../assets/images/personal.jpeg) ;
+    height: 40vh;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 75px; 
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    position: relative;
+    top: -117px;
+    width: 84%;
+    margin: auto;
+}

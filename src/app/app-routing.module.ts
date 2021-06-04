@@ -5,6 +5,7 @@ import {DetailsComponent} from './details/details.component';
 import {ListComponent} from './list/list.component';
 import { HtmlComponent } from './html/html.component';
 import { TopPlayersComponent } from './top-players/top-players.component';
+import { Html2Component } from './html2/html2.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,9 @@ const routes: Routes = [
   {
     path:'topPlayer', component:TopPlayersComponent, pathMatch:'full'
   },
-
+  {
+    path:'html2', component:Html2Component, pathMatch:'full'
+  },
   
 ]
 
