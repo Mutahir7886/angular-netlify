@@ -1,0 +1,45 @@
+
+.dpflex-just-cent{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    
+    height: 70px;
+    width: 275px !important;
+    margin: auto;
+}
+
+.wd-heght-inh{
+    width: inherit;
+    height: inherit;
+}
+
+.yellow-border{
+    border: 1px solid #DEBA37;
+}
+
+.clr-blue{
+    color: #5490C2
+}
+
+.heading{
+    font-size: 35px;
+}
+
+.sub-heading{
+    font-size: 25px;
+}
+
+.ft-fam{
+    font-family: 'Lato', sans-serif
+}
+
+.ft-wght{
+    font-weight: 300
+}
+
+.mg-btt-23{
+    margin-bottom: 23px !important;
+}
