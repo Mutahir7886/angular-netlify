@@ -43,3 +43,21 @@
 .mg-btt-23{
     margin-bottom: 23px !important;
 }
+
+
+.bg-yellow{
+    background: #DEBA37
+}
+
+.button{
+    outline: none;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin:5px 0px
+}
+
+.bg-grey{
+    background:#F5F5F5;
+}
