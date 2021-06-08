@@ -130,3 +130,15 @@ background: blue;
 .mg-10{
     margin:10px 10px
 }
+
+
+.footer{
+    background: #9a845e;width: 80%;margin: auto;position: absolute;left: 50%;transform: translateX(-50%);bottom: 0;padding-top: 20px;border-top-right-radius: 30%;border-top-left-radius: 30%;
+}
+
+@media (max-width: 1300px) {
+    .main-card{
+        margin-bottom: 12%
+    }
+  }
+  

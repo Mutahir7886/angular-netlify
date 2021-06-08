@@ -6,6 +6,7 @@ import {ListComponent} from './list/list.component';
 import { HtmlComponent } from './html/html.component';
 import { TopPlayersComponent } from './top-players/top-players.component';
 import { Html2Component } from './html2/html2.component';
+import { Html3Component } from './html3/html3.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path:'html2', component:Html2Component, pathMatch:'full'
+  },
+  {
+    path:'html3', component:Html3Component, pathMatch:'full'
   },
   
 ]

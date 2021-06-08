@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HtmlComponent } from './html/html.component';
 import { TopPlayersComponent } from './top-players/top-players.component';
 import { Html2Component } from './html2/html2.component';
+import { Html3Component } from './html3/html3.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Html2Component } from './html2/html2.component';
     ListComponent,
     HtmlComponent,
     TopPlayersComponent,
-    Html2Component
+    Html2Component,
+    Html3Component
   ],
   imports: [
     BrowserModule,
