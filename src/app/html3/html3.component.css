@@ -4,6 +4,16 @@
     justify-content: center;
 }
 
+.container{
+    display: flex;
+    width:60%;
+    margin:auto
+}
+
+.flex-wrap{
+    flex-wrap: wrap
+}
+
 .header{
     
     height: 70px;
@@ -43,8 +53,39 @@
 .mg-btt-23{
     margin-bottom: 23px !important;
 }
+.mg-btt-8{
+    margin-bottom: 8px !important;
+}
 
+.mg-btt-7{
+    margin-bottom: 7px !important;
+}
 
+.mg-btt-51{
+    margin-bottom: 51px !important;
+}
+.mg-btt-15{
+    margin-bottom: 15px !important;
+}
+.mg-btt-77{
+    margin-bottom: 77px !important;
+}
+.mg-btt-51{
+    margin-bottom: 51px !important;
+}
+.mg-btt-19{
+    margin-bottom: 19px !important;
+}
+
+.mg-btt-17{
+    margin-bottom: 17px !important;
+}
+.mg-btt-22{
+    margin-bottom: 22px !important;
+}
+.mg-btt-20{
+    margin-bottom: 20px !important;
+}
 .bg-yellow{
     background: #DEBA37
 }
@@ -64,4 +105,118 @@
 
 .fnt-16{
     font-size: 16px
+}
+
+.fnt-17{
+    font-size: 17px
+}
+
+.fnt-15{
+    font-size: 15px
+}
+.fnt-30{
+    font-size: 30px
+}
+.width{
+    width:100%
+}
+
+.fnt-12{
+    font-size: 12px
+}
+
+.flex-25{
+    flex: 0 0 25%;
+}
+
+.flex-30{
+    flex: 0 0 30%;
+}
+
+.pd-lf-23-5{
+    padding-left: 23.5px;
+}
+
+.pd-rg-23-5{
+    padding-right: 23.5px;
+}
+.pd-rg-12-5{
+    padding-right: 12.5px;
+}
+
+.pd-lf-12-5{
+    padding-left: 12.5px;
+}
+.pd-bt-25-5{
+    padding-bottom: 25.5px;
+}
+
+.pd-tp-25-5{
+    padding-top: 25.5px;
+}
+.pd{
+    padding: 0px 12.5px;
+}
+
+
+/* .con-type-1{
+    flex: 0 0 25%;
+    padding-right: 12.5px;
+    padding-bottom: 25.5px;
+}
+
+.con-type-2-3{
+    flex: 0 0 25%;
+    padding: 0px 12.5px;
+    padding-bottom: 25.5px;
+}
+.con-type-4{
+    flex: 0 0 25%;
+   
+    padding-bottom: 25.5px;
+}
+.con-type-6-7{
+    flex: 0 0 25%;
+    padding: 0px 12.5px;
+    padding-top: 25.5px;
+}
+
+.con-type-5{
+    flex: 0 0 25%;
+    padding-right: 12.5px;
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+}
+
+.con-type-8{
+    flex: 0 0 25%;
+    padding-left: 12.5px;
+    padding-top: 25.5px;
+}
+
+.con-type-9{
+    flex: 0 0 25%;
+    padding-right: 12.5px;
+    padding-top: 25.5px;
+} */
+
+
+.innr-container{
+    box-shadow: 0px 0px 9px #00000029;
+    text-align: center;
+}
+
+.bottom-button{
+    padding: 0px 50px;
+    background: #5490C2;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.containter-middle{
+    background: #F5F5F5;
+    border-radius: 6px;
+    text-align: center;
 }
