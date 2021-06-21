@@ -121,6 +121,11 @@
     width:100%
 }
 
+.height{
+    height: 177.25px;
+    object-fit: contain
+}
+
 .fnt-12{
     font-size: 12px
 }
@@ -216,7 +221,13 @@
 }
 
 .containter-middle{
-    background: #F5F5F5;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 9px #00000026;
     border-radius: 6px;
+    opacity: 1;
     text-align: center;
+}
+
+.scroll{
+    overflow-x: auto
 }
