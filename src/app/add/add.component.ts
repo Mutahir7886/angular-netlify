@@ -122,4 +122,12 @@ export class AddComponent implements OnInit {
       formGroup.reset()
     })   
   }
-}
+
+  check(event:any){
+    let a= event.target.value.split('.')
+    if(a[1] && a[1].length >=2 && (event.which >=48 && event.which <=57)){
+      console.log('check',event.which)
+      event.preventDefault();
+    }
+  }
+} 

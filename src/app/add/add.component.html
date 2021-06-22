@@ -1,7 +1,7 @@
 <form [formGroup]="formGroup" style="display: flex;flex-direction: column;width: 17%;" class="example-form">
     
         <label>First Name</label>
-        <input  formControlName="firstName" >
+        <input (keydown)="check($event)"  formControlName="firstName" >
     
 
     

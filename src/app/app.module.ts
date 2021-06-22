@@ -13,6 +13,7 @@ import { TopPlayersComponent } from './top-players/top-players.component';
 import { Html2Component } from './html2/html2.component';
 import { Html3Component } from './html3/html3.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { Html3Component } from './html3/html3.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
