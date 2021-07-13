@@ -98,10 +98,13 @@
 .banner-title{
     font-family: 'Dancing Script', cursive;
     color: white;
-    font-size: 10vw;
-    font-weight: 400;
     position: absolute;
     top: 36%;
     left: 26%;
     z-index: 4;
+}
+
+.main{
+    font-size: 10vw;
+    font-weight: 400;
 }
