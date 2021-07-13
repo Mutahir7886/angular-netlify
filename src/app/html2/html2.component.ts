@@ -10,6 +10,7 @@ export class Html2Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

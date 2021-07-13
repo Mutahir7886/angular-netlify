@@ -12,6 +12,8 @@ import { HtmlComponent } from './html/html.component';
 import { TopPlayersComponent } from './top-players/top-players.component';
 import { Html2Component } from './html2/html2.component';
 import { Html3Component } from './html3/html3.component';
+import { AaaComponent } from './aaa/aaa.component';
+import { ColorComponent } from './color/color.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { Html3Component } from './html3/html3.component';
     HtmlComponent,
     TopPlayersComponent,
     Html2Component,
-    Html3Component
+    Html3Component,
+    AaaComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,

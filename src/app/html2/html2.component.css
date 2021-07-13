@@ -142,3 +142,7 @@ background: blue;
     }
   }
   
+
+.un-ordered li:nth-child(-n+3){
+    color: red;
+}

@@ -7,6 +7,8 @@ import { HtmlComponent } from './html/html.component';
 import { TopPlayersComponent } from './top-players/top-players.component';
 import { Html2Component } from './html2/html2.component';
 import { Html3Component } from './html3/html3.component';
+import { AaaComponent } from './aaa/aaa.component';
+import { ColorComponent } from './color/color.component';
 
 
 const routes: Routes = [
@@ -34,7 +36,12 @@ const routes: Routes = [
   {
     path:'html3', component:Html3Component, pathMatch:'full'
   },
-  
+  {
+    path:'aaa', component:AaaComponent, pathMatch:'full'
+  },
+  {
+    path:'color', component:ColorComponent, pathMatch:'full'
+  },
 ]
 
 @NgModule({

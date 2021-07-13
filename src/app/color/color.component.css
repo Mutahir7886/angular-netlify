@@ -1,0 +1,107 @@
+.banner{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner img{
+    position: absolute;
+    height: 1175px;
+    width: 100%;
+    top: -15%;
+    z-index: -1;
+}
+
+.header-1{
+    color: white;
+    display: flex;
+    width: 70%;
+    margin: 10px auto;
+    justify-content: space-around;
+    z-index: 2;
+    position: relative;
+}
+
+.header-1 p{
+    margin: 0
+}
+
+.header-1-left{
+    flex: 0 0 40%;
+}
+
+.header-1-right{
+    display: flex;
+}
+
+.header-1-right p {
+    display: flex;
+    flex: 0 0 87%;
+}
+
+.header-1-right div{
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 20%;
+    align-items: center;
+}
+
+.header-2{
+    display: flex;
+    width: 58%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+    opacity: 0.8;
+    z-index: 2;
+    position: relative;
+}
+
+.header-2 div{
+    flex: 0 0 30%;
+    color: red;
+    font-size: 16px
+}
+
+.header-2 span{
+    color: white;
+    font-weight: 700
+}
+
+.header-2 nav{
+    flex: 0 0 70%;
+}
+
+.header-2 ul{
+    justify-content: space-between;
+    display: flex;
+    list-style: none;
+}
+
+.header-2 ul li{
+    color: white;
+    font-weight: 700
+}
+
+.layer-banner{
+    position: absolute;
+    background: black;
+    opacity: 35%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.banner-title{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 10vw;
+    font-weight: 400;
+    position: absolute;
+    top: 36%;
+    left: 26%;
+    z-index: 4;
+}
