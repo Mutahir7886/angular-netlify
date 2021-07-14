@@ -96,7 +96,6 @@
 
 
 .banner-title{
-    font-family: 'Dancing Script', cursive;
     color: white;
     position: absolute;
     top: 36%;
@@ -107,4 +106,263 @@
 .main{
     font-size: 10vw;
     font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+}
+
+.border{
+    
+    width: 30%;
+    margin: auto;
+    font-weight: 900;
+    font-size: 19px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 6px 10px;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 34%;
+    top: 2%;
+}
+
+.date{
+    color: #e52b34;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.date::before{
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+    content: '';
+    border-top: 1px solid red;
+    width: 100px;
+}
+
+.date:after{
+    position: absolute;
+    bottom: 0;
+    left: 56%;
+    content: '';
+    border-top: 1px solid red;
+    width: 100px;
+}
+
+
+.container{
+    display: flex;
+    width: 60%;
+    margin: auto;
+}
+
+.section-2-left{
+    background: #e52b34!important;
+    flex: 0 0 32%;
+    text-align: left;
+}
+
+.section-2-left form{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.section-2-left-containter{
+    width: 69%;
+    margin: 4rem auto;
+    
+}
+
+.section-2-left-containter button{
+    color: black;
+    background: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px
+}
+
+.section-2-left form input{
+    padding: 5px;
+    background: none;
+    height: 54px;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    outline: none;
+    border-radius: 2px;
+    margin-bottom: 15px
+}
+
+.section-2-left form input::placeholder{
+    color: white
+}
+
+.section-2-left h3{
+    color: white;
+    font-weight: 500
+}
+
+.section-2-mid{
+    flex: 0 0 32%;
+    margin: 40px;
+}
+.section-2-mid-containter{
+    width: 80%;
+    margin: auto
+}
+
+
+
+.heading1{
+    font-family: 'Dancing Script', cursive;
+    color: #EB586B;
+    position: relative;
+    top: 40px;
+    font-size: 40px;
+}
+
+
+.heading2{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.part3{
+    line-height: 2.4;
+    color: gray
+
+}
+.section-2-mid-right{
+    flex: 0 0 32%;
+    position: relative;
+}
+
+.section-2-mid-right img{
+    width: 242%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    right: 0px;
+}
+
+.container-3{
+    width: 60%;
+    margin: auto
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 31%;
+    margin: 10px;
+    border: 1px dotted;
+    background: #fcfcfc
+}
+
+
+.card-col{
+    display: flex;
+    padding: 30px 10px;
+    margin: 10px;
+    border-bottom: 1px dotted;
+}
+
+.card-row{
+    display: flex;
+}
+
+.card-col img{
+    width:60%;
+    border-radius: 50%;
+}
+
+.card-col div{
+    flex: 0 0 30%;
+}
+
+.names{
+    font-size: 16px;
+    margin: 0
+}
+
+.card h3{
+    text-align: center
+}
+
+.container-3-first-heading{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: red;
+    position: relative;
+    top: 47px;
+    font-size: 40px;
+    left: 0%;
+}
+
+
+.container-3-second-heading{
+    text-align: center;
+    font-size: 40px;
+}
+
+.container-4{
+    width: 60%;
+    margin: auto;
+    
+}
+
+.container-4-inner{
+    display: flex;
+}
+.container-4 img{
+    width: 100%
+}
+
+.container-4-inner-parts{
+    flex: 0 0 25%;
+    padding: 10px 10px
+
+}
+
+.container-5{
+    width: 60%;
+    margin: auto;
+    display:flex
+    
+}
+
+.container-5-part-1{
+    flex: 0 0 25%;
+    padding: 10px 10px
+}
+
+.container-5-part-1 img{
+    width: 100%
+}
+.container-5-part-2{
+    flex: 0 0 50%;
+   
+}
+
+.container-5-div{
+    width: 70%;
+    margin: auto
+}
+
+.container-5-div p {
+    margin: 20px 0px;
+}
+
+.container-5-div button {
+    background: #EB586B;
+    color: white;
+    border:none;
+    padding: 10px 
+}
+
+.container-6{
+    width: 60%;
+    margin: auto
 }
