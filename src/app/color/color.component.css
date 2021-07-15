@@ -6,7 +6,7 @@
 
 .banner img{
     position: absolute;
-    height: 1175px;
+    height: 136vh;
     width: 100%;
     top: -15%;
     z-index: -1;
@@ -257,7 +257,7 @@
     flex-direction: column;
     flex: 0 0 31%;
     margin: 10px;
-    border: 1px dotted;
+    border: 1px dotted #d4cfcf;
     background: #fcfcfc
 }
 
@@ -266,7 +266,7 @@
     display: flex;
     padding: 30px 10px;
     margin: 10px;
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted #d4cfcf;
 }
 
 .card-row{
@@ -366,3 +366,136 @@
     width: 60%;
     margin: auto
 }
+
+.container-7{
+    width: 48%;
+    margin: auto;
+    padding: 40px;
+    margin-top: 70px;
+}
+
+.container-7 h1{
+   font-size:40px;
+   color:white
+}
+
+.container-7 button{
+    background: #e52b34;
+    color: white;
+    border:1px solid white;
+    padding: 10px 15px;
+    border-radius: 5px 
+}
+
+.container-7 div{
+    text-align: center
+}
+
+.container-8{
+    width: 60%;margin:auto;display: flex;padding: 20px;
+}
+
+.container-8-col{
+    flex: 0 0 23%;color: white;padding-right: 15px
+}
+
+.container-8-col h2{
+    margin-bottom: 30px;
+            font-size: 20px;
+}
+
+.icon-div
+{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.icon-div div{
+              background: red;
+               border-radius: 50%;
+               text-align: center;
+               padding: 7px;
+               flex: 0 0 30%;
+               margin: 0 10px;
+}
+
+.dates-schedule{
+   display: flex;justify-content: space-between;width: 84%;
+}
+
+.container-8-col:last-child{
+    padding-left: 15px
+}
+
+.subscribe button{
+    height: 52px; background: red;color: white;padding: 0px 44px;border: none;margin-top: 10px;border-radius: 5px
+}
+
+.footer{
+    background:#e52b34!important
+}
+
+.footer div{
+   width: 30%;margin: auto;padding: 1px;color: white;
+}
+
+.footer div p{
+    margin:20px;
+}
+
+.container-9{
+    width: 32%;
+    margin: auto;
+}
+
+.container-9 h2{
+    font-size: 20px;margin: auto;text-align:center;
+}
+
+.container-9 img{
+    width: 20%;border-radius: 50%;width: 13%;border-radius: 50%;margin: 20px;
+}
+
+.quote{
+    position: absolute;left: 53%;top: 60%;background: white;border-radius: 50%;width: 30px;text-align: center;padding: 5px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('../../assets/images/p1.webp');
+  
+    /* Full height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .parallax1 {
+    /* The image used */
+    background-image: url('../../assets/images/parap.webp');
+  
+    /* Full height */
+    min-height: 680px; 
+  
+    /* Create the parallax scrolling effect */
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    /* opacity:35% */
+  }
