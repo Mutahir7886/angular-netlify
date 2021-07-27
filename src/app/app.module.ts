@@ -14,6 +14,7 @@ import { Html2Component } from './html2/html2.component';
 import { Html3Component } from './html3/html3.component';
 import { AaaComponent } from './aaa/aaa.component';
 import { ColorComponent } from './color/color.component';
+import { PractiseComponent } from './practise/practise.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ColorComponent } from './color/color.component';
     Html2Component,
     Html3Component,
     AaaComponent,
-    ColorComponent
+    ColorComponent,
+    PractiseComponent
   ],
   imports: [
     BrowserModule,

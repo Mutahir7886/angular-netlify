@@ -9,6 +9,7 @@ import { Html2Component } from './html2/html2.component';
 import { Html3Component } from './html3/html3.component';
 import { AaaComponent } from './aaa/aaa.component';
 import { ColorComponent } from './color/color.component';
+import { PractiseComponent } from './practise/practise.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:'color', component:ColorComponent, pathMatch:'full'
   },
+  {
+    path:'practise', component:PractiseComponent, pathMatch:'full'
+  },
+  
 ]
 
 @NgModule({
