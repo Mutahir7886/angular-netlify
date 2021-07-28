@@ -2,7 +2,7 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    min-width: 990px;
+    min-width: 1043px;
 
 }
 
@@ -103,11 +103,12 @@
 .banner-title{
     color: white;
     position: absolute;
-    top: 36%;
-    left: 26%;
+    top: 50%;
+    left: 50%;
     z-index: 4;
     display: flex;
     flex-direction: column;
+    transform: translate(-50%, -50%);
 }
 
 .main{
@@ -276,7 +277,7 @@
 .card{
     display: flex;
     flex-direction: column;
-    flex: 0 0 31%;
+    flex: 1 1 31%;
     margin: 10px;
     border: 1px dotted #d4cfcf;
     background: #fcfcfc
@@ -499,6 +500,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    min-width: 1043px;
   }
 
   .parallax1 {
@@ -537,14 +540,17 @@
     
    
    .section-2-mid-right img{
-       right: 120px;
-       height:690px;
+        right: 42px;
+        height: 659px;
    }
 
    .container{
-       min-width: 990px;
+        min-width: 840px;
    }
 
+   .section-2-mid-containter{
+       width: 100%
+   }
 }
 
 
@@ -552,12 +558,12 @@
     
    
     .section-2-mid-right img{
-        right: 150px;
-        height:750px;
+        right: -110px;
+        height: 659px;
     }
  
     .container{
-        min-width: 850px;
+        min-width: 600px;
     }
 
     .header-2{
@@ -565,6 +571,20 @@
     }
     .header-1{
         display: none;
+    }
+
+    .section-2-mid-containter {
+        width: 140%;
+        margin: auto;
+    }
+
+    .container-3 div{
+        flex-direction: column
+    }
+
+    .container-3 div div{
+       margin: auto;
+       width: 80%
     }
  }
  
