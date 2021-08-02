@@ -11,5 +11,8 @@ export class PractiseComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  resolved(){
+    console.log(`Resolved captcha with response:`);
 
+  }
 }

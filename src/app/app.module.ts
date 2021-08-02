@@ -15,6 +15,7 @@ import { Html3Component } from './html3/html3.component';
 import { AaaComponent } from './aaa/aaa.component';
 import { ColorComponent } from './color/color.component';
 import { PractiseComponent } from './practise/practise.component';
+import { RecaptchaModule } from "ng-recaptcha";
 
 
 @NgModule({
@@ -37,6 +38,8 @@ import { PractiseComponent } from './practise/practise.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    RecaptchaModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
