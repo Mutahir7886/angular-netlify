@@ -2,7 +2,7 @@
     <img width="100%" src="../../assets/images/con2.png">
 </div>
  -->
-
+<!-- 
 <div style="background: gray"> 
  
 
@@ -63,4 +63,19 @@
 <re-captcha
     (resolved)="resolved()"
     siteKey="6LdoSNUbAAAAAGI1-4QhS_qwNmPxzfVk2LaCN4Ko">
-</re-captcha>`
+</re-captcha>` -->
+
+<div class="container">
+
+    <h2 class="mb-5">Angular Stripe Credit Card Payment Gateway Example</h2>
+  
+    <div class="col-md-4 mb-3">
+      <button (click)="checkout(20)" class="btn btn-primary btn-block">Pay $20</button>
+    </div>
+    <div class="col-md-4 mb-3">
+      <button (click)="checkout(30)" class="btn btn-primary btn-block">Pay $30</button>
+    </div>
+    <div class="col-md-4">
+      <button (click)="checkout(40)" class="btn btn-primary btn-block">Pay $40</button>
+    </div>
+  </div>

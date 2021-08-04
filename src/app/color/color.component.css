@@ -2,7 +2,7 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    min-width: 1043px;
+    /* min-width: 1043px; */
 
 }
 
@@ -12,6 +12,7 @@
     width: 100%;
     top: -15%;
     z-index: -1;
+    object-fit: cover;
 }
 
 .header-1{
@@ -177,6 +178,7 @@
     display: flex;
     width: 60%;
     margin: auto;
+    position: relative;
 }
 
 .section-2-left{
@@ -257,8 +259,14 @@
 
 }
 .section-2-mid-right{
-    flex: 0 0 32%;
-    position: relative;
+    /* flex: 0 0 32%;
+    position: relative; */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .section-2-mid-right img{
@@ -501,7 +509,7 @@
     flex-direction: column;
     justify-content: center;
 
-    min-width: 1043px;
+    /* min-width: 1043px; */
   }
 
   .parallax1 {
@@ -558,7 +566,7 @@
     
    
     .section-2-mid-right img{
-        right: -110px;
+        right: -0px;
         height: 659px;
     }
  
@@ -588,7 +596,21 @@
     }
  }
  
-
+ @media (max-width:767px){
+    
+   
+    .section-2-mid-right img{
+        right: -0px;
+        height: 659px;
+    }
+ 
+    .container{
+        display:flex;
+        flex-direction: column
+    }
+   
+   
+ }
  @media (max-width:1056px){
     
    
