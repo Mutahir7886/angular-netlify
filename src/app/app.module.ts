@@ -17,6 +17,8 @@ import { ColorComponent } from './color/color.component';
 import { PractiseComponent } from './practise/practise.component';
 import { RecaptchaModule } from "ng-recaptcha";
 import { InnerComponent } from './inner/inner.component';
+import { HttpServiceService } from './Service/http-service.service';
+import { RemoteComponent } from './remote/remote.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { InnerComponent } from './inner/inner.component';
     AaaComponent,
     ColorComponent,
     PractiseComponent,
-    InnerComponent
+    InnerComponent,
+    RemoteComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { InnerComponent } from './inner/inner.component';
     RecaptchaModule,
 
   ],
-  providers: [],
+  providers: [HttpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

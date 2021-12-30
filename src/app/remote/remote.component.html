@@ -1,0 +1,82 @@
+<form [formGroup]="formGroup" style="display: flex;flex-direction: column;width: 17%;" class="example-form">
+    
+        <label>Title</label>
+        <input  formControlName="title" >
+    
+
+    
+        <label>Description</label>
+        <input  formControlName="description" >
+  
+
+    
+      
+  
+</form>
+
+
+<!-- education -->
+<div style="display: flex;width: 17%;justify-content: space-between;" >
+    <div>
+            <h1>  Section </h1>
+    </div>
+   <div style="margin-top: 20px; ">
+        <button (click)="addSection()" >Add Section </button>
+   </div>
+</div>
+
+<div style="margin-left: 20px" *ngFor="let item of subsection.controls; let i = index">
+ 
+<h2> Section {{i+1}} </h2>
+
+    <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
+       
+      <label>Title</label>
+      <input  formControlName="title" >
+  
+      <label>Description</label>
+      <input  formControlName="description" >
+
+    </form>
+    <div style="text-align: right;width:17%;margin-top: 20px">
+        <button (click)="addSubSection(item,i)"  *ngIf="item">
+            Add Sub Section
+        </button>
+    </div>
+   
+
+   
+    <div style="margin-left: 20px" *ngFor="let subForm of item.controls.subsection.controls; let ii = index">
+ 
+        <h2> Sub Section {{ii+1}} </h2>
+        
+            <form [formGroup]="subForm" style="display: flex;flex-direction: column;width: 17%;">
+               
+              <label>Title</label>
+              <input  formControlName="title" >
+          
+              <label>Description</label>
+              <input  formControlName="description" >
+        
+            </form>
+            <div style="text-align: right;width:17%;margin-top: 20px">
+                <button (click)="addSubSection(subForm,ii)"  >
+                    Add Further Sub Section
+                </button>
+            </div>
+           
+           
+        
+        </div>
+
+</div>
+
+
+
+<!--experience-->
+
+
+
+<div class="sign-in-container">
+    <button (click)="final(formGroup)" class="sign-in-button"  mat-raised-button>Submit</button>
+</div>
