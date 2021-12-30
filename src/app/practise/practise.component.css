@@ -32,3 +32,63 @@
       from{opacity: 0}
       to{opacity:1}
   }
+
+
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+body {
+     background: #FFE2AC;
+     padding: 60px;
+}
+.menu {
+     background: #75DDBD;
+     padding: 40px 0 40px 20px;
+     list-style-type: none;
+     width: 200px;
+     position: relative;   
+}
+.menu > li {
+     padding: 15px;
+     cursor: pointer;
+     position: relative;
+}
+.menu > li:hover::before, .menu > li:hover::after {
+     content: "";
+     position: absolute;
+}
+.menu > li:hover {
+     background: #FFE2AC;
+     border-radius: 60px 0 0 60px;
+}
+.menu > li > a {
+     padding: 10px 15px; 
+     font-family: 'Source Sans Pro', sans-serif;
+     color: #0A8660;
+     text-decoration: none;    
+}
+.menu > li:hover > a {
+     color: #FFA90A;
+}
+.menu > li:hover::before {
+     top: -80px;
+     right: -1px;
+     height: 80px;
+     width: 40px;
+     border-bottom-right-radius: 80px;
+     -moz-border-bottom-right-radius: 80px;
+     -webkit-border-bottom-right-radius: 80px;
+     -webkit-box-shadow: 0 40px 0 0 #FFE2AC; 
+     -moz-box-shadow: 0 40px 0 0 #FFE2AC;
+     box-shadow: 0 40px 0 0 #FFE2AC;
+}
+.menu > li:hover::after {
+     top: 50px;
+     right: -1px;
+     height: 80px;
+     width: 40px;
+     border-top-right-radius: 80px;
+     -moz-border-top-right-radius: 80px;
+     -webkit-border-top-right-radius: 80px;
+     -webkit-box-shadow: 0 -40px 0 0 #FFE2AC;
+     -moz-box-shadow: 0 -40px 0 0 #FFE2AC;
+     box-shadow: 0 -40px 0 0 #FFE2AC;
+}

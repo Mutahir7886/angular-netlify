@@ -16,6 +16,7 @@ import { AaaComponent } from './aaa/aaa.component';
 import { ColorComponent } from './color/color.component';
 import { PractiseComponent } from './practise/practise.component';
 import { RecaptchaModule } from "ng-recaptcha";
+import { InnerComponent } from './inner/inner.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RecaptchaModule } from "ng-recaptcha";
     Html3Component,
     AaaComponent,
     ColorComponent,
-    PractiseComponent
+    PractiseComponent,
+    InnerComponent
   ],
   imports: [
     BrowserModule,
