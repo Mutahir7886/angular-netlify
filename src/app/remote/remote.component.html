@@ -1,26 +1,26 @@
 <form [formGroup]="formGroup" style="display: flex;flex-direction: column;width: 17%;" class="example-form">
-    
-        <label>Title</label>
-        <input  formControlName="title" >
-    
 
-    
-        <label>Description</label>
-        <input  formControlName="description" >
-  
+    <label>Title</label>
+    <input formControlName="title">
 
-    
-      
-  
+
+
+    <label>Description</label>
+    <input formControlName="description">
+
+
+
+
+
 </form>
 
 
 <!-- education -->
-<div style="display: flex;width: 17%;justify-content: space-between;" >
+<div style="display: flex;width: 17%;justify-content: space-between;">
     <div>
-            <h1>  Section </h1>
+        <h1> Section </h1>
     </div>
-   <!-- <div style="margin-top: 20px; ">
+    <!-- <div style="margin-top: 20px; ">
         <button (click)="addSection()" >Add Section </button>
    </div> -->
 </div>
@@ -78,9 +78,9 @@
 
 
 <div class="sign-in-container">
-    <button (click)="final(formGroup)" class="sign-in-button"  mat-raised-button>Submit</button>
+    <button (click)="final(formGroup)" class="sign-in-button" mat-raised-button>Submit</button>
 </div>
-<button (click)="addSection()" >AddSection </button>
+<button (click)="addSection()">AddSection </button>
 
 <!-- <ul>
 
@@ -113,22 +113,19 @@
   </li>
 </ng-template> -->
 
-     <ul>
-        <ng-container
-          *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"
-        ></ng-container>
-      </ul>
-      
-      <ng-template #recursiveListTmpl let-list="list">
-        <li *ngFor="let item of list;let i =index">
-    <input type="text" value="{{ item.title }}"> 
-    
-    <ul *ngIf="item.children.length > 0">
-            <button (click)="addsubSection(i,item.children)" >Add SubSection </button>
-            <ng-container
-              *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }">
+<ul>
+    <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"></ng-container>
+</ul>
+
+<ng-template #recursiveListTmpl let-list="list">
+    <li *ngFor="let item of list;let i =index">
+        <input type="text" value="{{ item.title }}">
+
+        <button (click)="addsubSection(i,item.children)">Add SubSection </button>
+        <ul *ngIf="item.children.length > 0">
+            <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }">
             </ng-container>
-           
-          </ul>
-        </li>
-      </ng-template>
+
+        </ul>
+    </li>
+</ng-template>
