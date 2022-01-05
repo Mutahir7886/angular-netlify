@@ -9,8 +9,35 @@ import { HttpServiceService } from '../Service/http-service.service';
 export class RemoteComponent implements OnInit {
   formGroup:FormGroup;
   path = 'https://resume-backend.netlify.app/.netlify/functions/app/add';
+  // list :any
   
-
+  public list = [
+    {
+      title: "Section 1",
+      children: []
+    },
+    {
+      title: "Section 2",
+      children: []
+    },
+    {
+      title: "Section 3",
+      children: [
+        { title: "Section 3.1", children: [] },
+        {
+          title: "Section 3.2",
+          children: [ 
+          ]
+        },
+        {
+          title: "Section 3.3",
+          children: [
+          
+          ]
+        }
+      ]
+    }
+  ];
   constructor(private formBuilder: FormBuilder,
     private httpService:HttpServiceService) {
     this.formGroup = this.formBuilder.group({
@@ -22,6 +49,8 @@ export class RemoteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.list =[{title:'','description':'','children':[]}]
+      
   }
 
   get subsection(): any {
@@ -44,13 +73,35 @@ export class RemoteComponent implements OnInit {
   addSection(){
     this.subsection.push(this.subSectionForm())
     console.log(this.subsection)
+    // this.list.push({'title':this.formGroup.value().title})
+    this.list.push({title:'','children':[]})
+    console.log('list',this.list)
+
   }
 
+
+  addsubSection(index:any,list:any){
+    console.log('yes',list)
+    let a = list.length+1
+    list.push({title:''+a,'children':[]})
+    if(this.list[index].children.length>0){
+      console.log('yes')
+    }
+    else{
+      // this.list[index].children.push({title:'','description':'','children':[]})
+
+    }
+    console.log('list',this.list)
+
+  }
   addSubSection(item:any,index:any){
+    console.log('this.subsection',item)
+
     console.log('check',this.subsection.controls[index])
+
+
     
     // this.subsection.controls[index].controls[index].subsection.controls.push(this.subSectionForm)
-    console.log('this.subsection',item)
     item.controls.subsection.push(this.subSectionForm())
     // console.log('this.subsection',item.controls.subsection)
     console.log('this.subsection', this.subsection)

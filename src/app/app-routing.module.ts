@@ -10,12 +10,18 @@ import { Html3Component } from './html3/html3.component';
 import { AaaComponent } from './aaa/aaa.component';
 import { ColorComponent } from './color/color.component';
 import { PractiseComponent } from './practise/practise.component';
+import { RemoteComponent } from './remote/remote.component';
 
 
 const routes: Routes = [
   {
     path:'add', component:AddComponent, pathMatch:'full'
   },
+  {
+    path:'remote', component:RemoteComponent, pathMatch:'full'
+  },
+
+  
   {
     path:'details/:id', component:DetailsComponent, pathMatch:'full'
   },
