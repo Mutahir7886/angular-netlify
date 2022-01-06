@@ -10,34 +10,10 @@ export class RemoteComponent implements OnInit {
   formGroup:FormGroup;
   path = 'https://resume-backend.netlify.app/.netlify/functions/app/add';
   // list :any
+  section:any = 0
   
-  public list = [
-    {
-      title: "Section 1",
-      children: []
-    },
-    {
-      title: "Section 2",
-      children: []
-    },
-    {
-      title: "Section 3",
-      children: [
-        { title: "Section 3.1", children: [] },
-        {
-          title: "Section 3.2",
-          children: [ 
-          ]
-        },
-        {
-          title: "Section 3.3",
-          children: [
-          
-          ]
-        }
-      ]
-    }
-  ];
+  public list :any = []
+  sectionArray: any= []
   constructor(private formBuilder: FormBuilder,
     private httpService:HttpServiceService) {
     this.formGroup = this.formBuilder.group({
@@ -71,19 +47,23 @@ export class RemoteComponent implements OnInit {
   
 
   addSection(){
+    this.section = this.section +1
+    this.sectionArray.push(this.section)
     this.subsection.push(this.subSectionForm())
     console.log(this.subsection)
     // this.list.push({'title':this.formGroup.value().title})
-    this.list.push({title:'','children':[]})
+    this.list.push({title:'','description':'',section:this.section,'children':[]})
     console.log('list',this.list)
 
   }
 
 
   addsubSection(index:any,list:any){
-    console.log('yes',list)
+    console.log('yessss',this.list[index])
+
+    this.checksubIndex(this.list[index])
     let a = list.length+1
-    list.push({title:''+a,'children':[]})
+    list.push({title:''+a,'description':'',section:this.sectionArray[index]+ '.' +a,'children':[]})
     if(this.list[index].children.length>0){
       console.log('yes')
     }
@@ -94,53 +74,80 @@ export class RemoteComponent implements OnInit {
     console.log('list',this.list)
 
   }
-  addSubSection(item:any,index:any){
-    console.log('this.subsection',item)
 
-    console.log('check',this.subsection.controls[index])
+  checksubIndex(list:any){
+    console.log('check list' ,list.children)
+
+    // if(list.children.length > 0){
+    //   console.log('rotation 1' ,list.children)
+
+    //   this.checksubIndex (list.children)
+    // }
+    // else{
+    //   console.log('stop')
+    // }
+  }
+
+  checkIndex( i:any,list:any){
+    console.log('yes',list)
+    let a = list.length+1
+
+    return a
+    // if(list.children.length==0){
+    //   return i +1
+    // }
+    // else{
+    //   return (i+1) + '.' + i
+    // }
+
+  }
+  // addSubSection(item:any,index:any){
+  //   console.log('this.subsection',item)
+
+  //   console.log('check',this.subsection.controls[index])
 
 
     
-    // this.subsection.controls[index].controls[index].subsection.controls.push(this.subSectionForm)
-    item.controls.subsection.push(this.subSectionForm())
-    // console.log('this.subsection',item.controls.subsection)
-    console.log('this.subsection', this.subsection)
+  //   // this.subsection.controls[index].controls[index].subsection.controls.push(this.subSectionForm)
+  //   item.controls.subsection.push(this.subSectionForm())
+  //   // console.log('this.subsection',item.controls.subsection)
+  //   console.log('this.subsection', this.subsection)
   
    
     
-  }
+  // }
 
   
 
-  final(formGroup:any){
-    console.log(formGroup)
-    return
-    let a:any= {}
-    a.bioData= {
-      firstName:formGroup.value.firstName,
-      lastName:formGroup.value.lastName,
-      email:formGroup.value.email,
-      contact:formGroup.value.contact,
-      designation:formGroup.value.designation
-    }
-    a.education = formGroup.value.education
-    a.experience = formGroup.value.experience
-    a.project = formGroup.value.project
-    a.hobbies = formGroup.value.hobbies
-    console.log('FINAL FORM GROUP' , a  )
+  // final(formGroup:any){
+  //   console.log(formGroup)
+  //   return
+  //   let a:any= {}
+  //   a.bioData= {
+  //     firstName:formGroup.value.firstName,
+  //     lastName:formGroup.value.lastName,
+  //     email:formGroup.value.email,
+  //     contact:formGroup.value.contact,
+  //     designation:formGroup.value.designation
+  //   }
+  //   a.education = formGroup.value.education
+  //   a.experience = formGroup.value.experience
+  //   a.project = formGroup.value.project
+  //   a.hobbies = formGroup.value.hobbies
+  //   console.log('FINAL FORM GROUP' , a  )
 
-    this.httpService.post(this.path,a).subscribe( val => {
-      console.log("post api call", val) 
-      formGroup.reset()
-    })   
-  }
+  //   this.httpService.post(this.path,a).subscribe( val => {
+  //     console.log("post api call", val) 
+  //     formGroup.reset()
+  //   })   
+  // }
 
-  check(event:any){
-    let a= event.target.value.split('.')
-    if(a[1] && a[1].length >=2 && (event.which >=48 && event.which <=57)){
-      console.log('check',event.which)
-      event.preventDefault();
-    }
-  }
+  // check(event:any){
+  //   let a= event.target.value.split('.')
+  //   if(a[1] && a[1].length >=2 && (event.which >=48 && event.which <=57)){
+  //     console.log('check',event.which)
+  //     event.preventDefault();
+  //   }
+  // }
 
 }
