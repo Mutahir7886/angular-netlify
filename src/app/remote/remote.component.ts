@@ -58,26 +58,21 @@ export class RemoteComponent implements OnInit {
   }
 
 
-  addsubSection(index:any,list:any){
+  addsubSection(index:any,item:any,list:any){
     console.log('yessss',this.list[index])
 
-    this.checksubIndex(this.list[index])
+    var sectionPrefix = this.checksubIndex(this.sectionArray[index],index,item)
     let a = list.length+1
-    list.push({title:''+a,'description':'',section:this.sectionArray[index]+ '.' +a,'children':[]})
-    if(this.list[index].children.length>0){
-      console.log('yes')
-    }
-    else{
+    list.push({title:'','description':'',section:sectionPrefix+ '.' +a,'children':[]})
+    
       // this.list[index].children.push({title:'','description':'','children':[]})
 
-    }
     console.log('list',this.list)
 
   }
 
-  checksubIndex(list:any){
-    console.log('check list' ,list.children)
-
+  checksubIndex(list:any,index:any,mainitem:any){
+    return mainitem.section
     // if(list.children.length > 0){
     //   console.log('rotation 1' ,list.children)
 
