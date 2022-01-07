@@ -14,6 +14,8 @@ export class RemoteComponent implements OnInit {
   
   public list :any = []
   sectionArray: any= []
+  title:any= []
+  description:any = []
   constructor(private formBuilder: FormBuilder,
     private httpService:HttpServiceService) {
     this.formGroup = this.formBuilder.group({
@@ -49,11 +51,19 @@ export class RemoteComponent implements OnInit {
   addSection(){
     this.section = this.section +1
     this.sectionArray.push(this.section)
+    let title = ''
+    let description = ''
+
+    this.title.push(title)
+    this.description.push(description)
+
     this.subsection.push(this.subSectionForm())
     console.log(this.subsection)
     // this.list.push({'title':this.formGroup.value().title})
     this.list.push({title:'','description':'',section:this.section,'children':[]})
     console.log('list',this.list)
+    console.log('title',this.title,'descr',this.description)
+
 
   }
 
@@ -112,7 +122,15 @@ export class RemoteComponent implements OnInit {
     
   // }
 
+  final(formGroup:any){
+    console.log(formGroup.value)
+
+    console.log(this.title)
+    console.log(this.description)
+
   
+
+  }
 
   // final(formGroup:any){
   //   console.log(formGroup)

@@ -111,11 +111,12 @@
         
         <ng-container
         *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }"
-      ></ng-container>
+        ></ng-container>
     </ul>
-  </li>
+</li>
 </ng-template> -->
 
+<button (click)="final(formGroup)" class="sign-in-button" mat-raised-button>Submit</button>
 <ul class="containerDiv2">
     <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"></ng-container>
 </ul>
@@ -125,21 +126,21 @@
         <h4 >Section {{item.section}}</h4>
         <!-- <h4  *ngIf="item.children.length ==0">Section {{checkIndex(i,item)}}</h4> -->
 
-        <form>
+
+       <!-- <form [formGroup]="section.controls[i]"> -->
 
        
         <label>Title</label>
         <br>
 
-        <input type="text" value="{{ item.title }}">
+        <input type="text"  [(ngModel)]="title[i]" >
         <br>
         <label>Description</label>
         <br>
 
-        <textarea type="text" value="{{ item.description }}"></textarea>
+        <textarea type="text"  [(ngModel)]="description[i]"></textarea>
 
-        </form>
-    
+        <!-- </form> -->
         <button class="add-subsection" (click)="addsubSection(i,item,item.children)">Add SubSection </button>
        
 
@@ -152,4 +153,4 @@
 
         </ul>
     </li>
-</ng-template>
+</ng-template> 
