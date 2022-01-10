@@ -16,6 +16,9 @@ export class RemoteComponent implements OnInit {
   sectionArray: any= []
   title:any= []
   description:any = []
+  enableInputTitleField: boolean = false;
+  enableInputDescriptionField: boolean = false;
+
   constructor(private formBuilder: FormBuilder,
     private httpService:HttpServiceService) {
     this.formGroup = this.formBuilder.group({
@@ -163,4 +166,11 @@ export class RemoteComponent implements OnInit {
   //   }
   // }
 
+  enableInputTitle(){
+    this.enableInputTitleField = true
+  }
+
+  enableInputDescription(){
+    this.enableInputDescriptionField = true
+  }
 }

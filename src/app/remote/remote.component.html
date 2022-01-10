@@ -1,120 +1,9 @@
-<!-- <form [formGroup]="formGroup" style="display: flex;flex-direction: column;width: 17%;" class="example-form">
 
-    <label>Title</label>
-    <input formControlName="title">
-
-
-
-    <label>Description</label>
-    <input formControlName="description">
-
-
-
-
-
-</form> -->
-
-
-<!-- education -->
-<!-- <div style="display: flex;width: 17%;justify-content: space-between;">
-    <div>
-        <h1> Section </h1>
-    </div> -->
-    <!-- <div style="margin-top: 20px; ">
-        <button (click)="addSection()" >Add Section </button>
-   </div> -->
-<!-- </div> -->
-
-<!-- <div style="margin-left: 20px" *ngFor="let item of subsection.controls; let i = index">
- 
-<h2> Section {{i+1}} </h2>
-
-    <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
-       
-      <label>Title</label>
-      <input  formControlName="title" >
-  
-      <label>Description</label>
-      <input  formControlName="description" >
-
-    </form>
-    <div style="text-align: right;width:17%;margin-top: 20px">
-        <button (click)="addSubSection(item,i)"  *ngIf="item">
-            Add Sub Section
-        </button>
-    </div>
-   
-
-   
-    <div style="margin-left: 20px" *ngFor="let subForm of item.controls.subsection.controls; let ii = index">
- 
-        <h2> Sub Section {{ii+1}} </h2>
-        
-            <form [formGroup]="subForm" style="display: flex;flex-direction: column;width: 17%;">
-               
-              <label>Title</label>
-              <input  formControlName="title" >
-          
-              <label>Description</label>
-              <input  formControlName="description" >
-        
-            </form>
-            <div style="text-align: right;width:17%;margin-top: 20px">
-                <button (click)="addSubSection(subForm,ii)"  >
-                    Add Further Sub Section
-                </button>
-            </div>
-           
-           
-        
-        </div>
-
-</div> -->
-
-
-
-<!--experience-->
-
-
-
-<!-- <div class="sign-in-container">
-    <button (click)="final(formGroup)" class="sign-in-button" mat-raised-button>Submit</button>
-</div> -->
 <div class="containerDiv">
     <button style="margin:10px" class="add-subsection" (click)="addSection()">AddSection </button>
 
 </div>
 
-<!-- <ul>
-
-  <ng-container
-    *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"
-  ></ng-container>
-</ul>
-
-<ng-template #recursiveListTmpl let-list="list">
-  <li *ngFor="let item of list;let i =index">
-    <br>
-
-    <label>Title</label>
-    <br>
-
-    <input type="text" value="{{ item.title }}"> 
-    <br>
-    <label>Description</label>
-    <br>
-    <input type="text" value=" {{ item.description }}"> 
-   
-    <button (click)="addsubSection(i)" >Add SubSection </button>
-    
-    <ul *ngIf="item.children.length > 0">
-        
-        <ng-container
-        *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }"
-        ></ng-container>
-    </ul>
-</li>
-</ng-template> -->
 
 <button (click)="final(formGroup)" class="sign-in-button" mat-raised-button>Submit</button>
 <ul class="containerDiv2">
@@ -124,30 +13,48 @@
 <ng-template #recursiveListTmpl let-list="list">
     <li *ngFor="let item of list;let i =index">
         <h4 >Section {{item.section}}</h4>
-        <!-- <h4  *ngIf="item.children.length ==0">Section {{checkIndex(i,item)}}</h4> -->
-
-
-       <!-- <form [formGroup]="section.controls[i]"> -->
+     
 
        
         <label>Title</label>
         <br>
 
-        <input type="text"  [(ngModel)]="title[i]" >
+        <div style="display: flex;justify-content: space-between;">
+            <div>
+                {{item.title}}
+            </div>
+            <div >
+                <button (click)="enableInputTitle()">edit</button>
+                <button (click)="saveInputTitle()">save</button>
+
+            </div>
+        </div>
+        
+        <div  *ngIf="enableInputTitleField">
+
+            <input type=" text"  [(ngModel)]="title[i]" >
+        </div>
         <br>
         <label>Description</label>
         <br>
 
-        <textarea type="text"  [(ngModel)]="description[i]"></textarea>
+        <textarea *ngIf="enableInputDescriptionField" type="text" ></textarea>
+        <div style="display: flex;justify-content: space-between;">
+            <div>
+                {{item.title}}
+            </div>
+            <div>
+                <button (click)="enableInputDescription()">edit</button>
+                <button (click)="saveInputDescription()">save</button>
 
+            </div>
+        </div>
         <!-- </form> -->
         <button class="add-subsection" (click)="addsubSection(i,item,item.children)">Add SubSection </button>
        
 
         <ul *ngIf="item.children.length > 0">
-            <!-- <h4>Section {{i+1}}</h4> -->
-        <!-- <h4>SubSection {{sectionArray[i]}}.{{checkIndex(i,item.children)}}</h4> -->
-
+      
             <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }">
             </ng-container>
 
